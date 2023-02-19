@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifesto>
+    <meta>
+        <título>TPC1</título>
+        <subtítulo>Site sobre hipopótamos e conclusão do exercício iniciado na aula</subtítulo>
+        <data>2023-02-19</data>
+        <autor>
+            <nome>Filipe Emanuel Santos Fernandes</nome>
+            <id>a83996</id>
+            <gitlink>https://github.com/Falape/RPCW2023</gitlink>
+        </autor>
+        <uc>Representação e Processamento de Conhecimento na Web</uc>
+    </meta>
+    <resumo>
+        <p>Parágrafo este TPC estava dívidido em dois sub TPCs, fazer um site sobre um dos temas: hipopótamo, holofote, Hungria, Henriqueta) e 
+        concluir o exercício sobre as cidades iniciado na aula.</p>
+        <p>Para o site foi escolhido o tema hipopótamo e de forma a tornar a página mas bonita foi criado um CSS.</p>
+        <p>No segundo sub TPC, era pedido para adicionar as ligações às cidades.</p>
+        <p>Foi então adicionado ao ficheiro <i>cidades.py</i> um dicionário onde cada key é o id da cidade(origem) e tem a si relacionado uma lista 
+        com os ids das cidades que tem como destino.</p>
+        <p>O ficheiro <i>cidades.py</i> gera a página html <i>index.html</i>.</p>
+    </resumo>
+    <resultados>
+        <resultado path="Site_Hipopotamos/img">Imagens utilizadas no site sobre hipopótamos;</resultado>
+        <resultado path="Site_Hipopotamos/index.html">Página web site sobre hipopótamos;</resultado>
+        <resultado path="Site_Hipopotamos/styles.css">CSS para a pagina sobre hipopótamos;</resultado>
+        <resultado path="Cidades/cidades.py">Script python, que faz o parse e geração da página;</resultado>
+        <resultado path="Cidades/mapa.json">Ficheiro JSON com informação sobre as cidades e ligações</resultado>
+        <resultado path="Cidades/index.html">Pagina web que foi gerada pelo script python</resultado>
+    </resultados>
+</manifesto>
