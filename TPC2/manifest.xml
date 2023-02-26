@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifesto>
+    <meta>
+        <título>TPC2</título>
+        <data>2023-02-26</data>
+        <autor>
+            <nome>Filipe Emanuel Santos Fernandes</nome>
+            <id>a83996</id>
+            <gitlink>https://github.com/Falape/RPCW2023</gitlink>
+        </autor>
+        <uc>Representação e Processamento de Conhecimento na Web</uc>
+    </meta>
+    <resumo>
+        <p>Foi criado o script core.py que usando o package de python BeautifulSoup foi feito o parse do <it>arq.xml</it>, sendo gerados os ficheiros xml que são compostos por cada elemento ARQELEM.</p>
+        <p>No script também é geranda a página <it>index.html</it> que permite o acesso às páginas através do servidor nodejs <it>servidor.js</it></p>
+    </resumo>
+    <resultados>
+        <resultado path="arq.xml">Ficheiro XML com informação dos arquivos;</resultado>
+        <resultado path="core.py">Script de python que faz o parse da informação gerando os ficheirox xml extraidos do <it>arq.xml</it> e gera a página index.html;</resultado>
+        <resultado path="index.html">Página principal que permite acesso aos recursos;</resultado>
+        <resultado path="servidor.js">Ficheiro do servidor nodejs;</resultado>
+        <resultado path="arqFiles/">Pasta que contem os arquivos XML.</resultado>
+    </resultados>
+</manifesto>
