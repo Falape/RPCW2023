@@ -1,0 +1,25 @@
+extends layout
+
+block content
+  h1 Lista de Individuos
+  table 
+    tr 
+        th id
+        th Nome
+        th Idade
+        th Sexo
+        th Profissão
+        th Desporto
+        th Cidade
+    each a in individuos
+        tr
+            td= a.id
+            td= a.nome
+            td= a.idade
+            td= a.sexo
+            td= a.profissao
+            td= a.desportos
+            td= a.cidade
+  
+  h3
+        a(href="http://localhost:7777/")= "Voltar ao Menu"

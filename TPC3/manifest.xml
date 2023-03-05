@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifesto>
+    <meta>
+        <título>TPC3</título>
+        <data>2023-03-05</data>
+        <autor>
+            <nome>Filipe Emanuel Santos Fernandes</nome>
+            <id>a83996</id>
+            <gitlink>https://github.com/Falape/RPCW2023</gitlink>
+        </autor>
+        <uc>Representação e Processamento de Conhecimento na Web</uc>
+    </meta>
+    <resumo>
+        <p>Para o acesso aos dados foi utlizado <it>Json-Server</it> e o ficherio JSON com o dados <it>dataset-extra1-ids.json</it>. </p>
+        <p>Foi utilizada a framework <it>ExpressJS</it> para criar um servidor que consumia os dados do json-server e depois rendirizava as páginas.</p>
+        <p>Foram criadas as páginas: Main Menu, Lista de individuos, Distribuição de Sexo, Distribuição Desporto e Top 10 Profissões.</p>
+        <p>Para as páginas Distribuição de Sexo e Distribuição Desporto foi utilizado o package Chart e as distribuições são apresentadas sobe a forma de chart(pie chart e bar chart, respetivamente)</p>
+        <p>Todas as páginas têm navbar que permite a navegação por todas as páginas e botão de voltar ao main menu</p>
+        <p>Foi ainda feito um ficheiro CSS para embelezar o site</p>
+    </resumo>
+    <resultados>
+        <resultado path="dataset-extra1-ids.json">Ficheiro JSON com informação dos dos individuos;</resultado>
+        <resultado path="app.js">Main File so servidor;</resultado>
+        <resultado path="routes/">Páginas js para onde são encaminhdas as routes;</resultado>
+        <resultado path="views/">Templates Pug que iram ser utilizados para rendirizar as páginas HTML;</resultado>
+        <resultado path="public/stylesheets/style.css">Ficheiro CSS;</resultado>
+        <resultado path=".env">File enviroment com variáveis globais.</resultado>
+    </resultados>
+</manifesto>

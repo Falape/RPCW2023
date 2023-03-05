@@ -1,0 +1,48 @@
+extends layout
+
+block content
+  h1 Distribuição de Desportos
+  div.center
+    canvas(id="bar-chart")
+  script(src="https://cdn.jsdelivr.net/npm/chart.js")
+  script.
+    function loadBarChart(x, y) {
+        //1.
+        let barChart = document.getElementById("bar-chart");
+        //2.
+        //var xValues = ["Italy", "France", "Spain", "USA", "Argentina"];
+        //var yValues = [55, 49, 44, 24, 15];
+        var barColors = ["red", "green","blue","orange","brown","purple","yellow"];
+
+        barChart = new Chart(barChart, {
+          type: "bar",
+          data: {
+            labels: x,
+            datasets: [{
+              backgroundColor: barColors,
+              data: y
+            }]
+          },
+          options: {
+            responsive: true,
+            legend: {
+              display: false
+            },
+            title: {
+              display: true,
+              text: "Desportos"
+            }
+          }
+        });
+    }
+   
+    var xValue = '#{xValue}'
+    xValue = xValue.split(",")
+    console.log(xValue)
+    var yValue = #{JSON.stringify(yValue)}
+
+    loadBarChart(xValue, yValue)
+
+  
+  h3
+        a(href="http://localhost:7777/")= "Voltar ao Menu"

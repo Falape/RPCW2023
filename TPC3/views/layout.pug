@@ -1,0 +1,20 @@
+doctype html
+html
+  head
+    title= Individuos
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    nav 
+      h2 Menu
+      div(class='row')
+        h3
+          a(href="http://localhost:7777/")= "Main Page"
+        h3
+          a(href="http://localhost:7777/listIndividuos")= "Lista Indíviduos"
+        h3
+          a(href="http://localhost:7777/distribuicaoSexo")= "Distribuição Sexo"
+        h3
+          a(href="http://localhost:7777/distribuicaoDesporto")= "Distribuição Desporto"
+        h3
+          a(href="http://localhost:7777/top10profissoes")= "Top 10 Profissões"
+  body
+    block content

@@ -1,0 +1,41 @@
+extends layout
+
+block content
+  h1 Distribuição Sexo
+  div.center
+    canvas(id="pie-chart")
+  script(src="https://cdn.jsdelivr.net/npm/chart.js")
+  script.
+    function loadPieChart(feminino, masculino) {
+        //1.
+        let pieChart = document.getElementById("pie-chart");
+        //2.
+        pieChart = new Chart(pieChart, {
+          type: "pie",
+          data: {
+            datasets: [
+              //only 1 data obj in datasets
+              {
+                data: [feminino,masculino], // female, male
+                backgroundColor: [
+                  "rgba(255,137,180, 0.5)", //pink for female
+                  "rgba(44, 130, 201, 0.5)", //blue for male
+                ],
+                borderColor: ["rgba(255,137,180,1 )", "rgba(44, 130, 201,1)"],
+                borderWidth: 1, //they share the same value so no need array
+              },
+            ],
+            //add custom labels, female first then male
+            labels: ["Female", "Male"],
+          },
+           options: {
+              responsive: true
+            }
+        });
+    }
+
+    loadPieChart(#{feminino},#{masculino})
+
+  
+  h3
+        a(href="http://localhost:7777/")= "Voltar ao Menu"

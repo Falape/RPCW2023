@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1 Top 10 Profissões
+  div
+    ol 
+        each tuple in top10Profissoes
+          li 
+            h3 #{tuple[0]} - #{tuple[1]}
+  
+  h3
+        a(href="http://localhost:7777/")= "Voltar ao Menu"
