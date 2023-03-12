@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifesto>
+    <meta>
+        <título>TPC4</título>
+        <data>2023-03-12</data>
+        <autor>
+            <nome>Filipe Emanuel Santos Fernandes</nome>
+            <id>a83996</id>
+            <gitlink>https://github.com/Falape/RPCW2023</gitlink>
+        </autor>
+        <uc>Representação e Processamento de Conhecimento na Web</uc>
+    </meta>
+    <resumo>
+        <p>Este TPC consistia em desenvolver um servidor web dinâmico utilizando Node.js e json-server para API de dados.</p>
+        <p>O servidor web tem como objetivo gerir tarefas, isto é consultar, editar, concluir e eliminar tarefas.</p>
+        <p>E tem de seguir uma estrutura Single Page Application</p>
+        <p>Todos estes objetivos foram conseguidos.</p>
+        <p>A comunicação com a API de dados é feita através do axios.</p>
+        <p>Para a opção de editar tarefas é utilizado um formúlário pop-up e é feito no fim de cada request 
+        redirecionamento para a main page, garantindo assim a SPA(extra).</p>
+        <p>Para correr o servidor é preciso ter o json-server a correr, <it>notes.json</it>na porta 3000.</p>
+        <p>Para correr o servidor basta correr 'npm install' para que sejam instaladas as dependências
+        e depois utilizar 'npm run run' ou  'node server.js' para correr em mdo dev 'npm run dev' 
+        mas irá causar o refresh do server sempre que haja uma alteração nos ficheiros.</p>
+    </resumo>
+    <resultados>
+        <resultado path="notes.json">Ficheiro json que Terá a função de Data base;</resultado>
+        <resultado path="server.js">Servidor Web;</resultado>
+        <resultado path="makepage.js">Ficheiro utilizado para a criação da página HTML;</resultado>
+        <resultado path="static.js">Dado pelo Professor, para fornecer conteúdos estáticos (neste casa ficheiro CSS);</resultado>
+        <resultado path="public/mini-dark.css">Ficheiro CSS.</resultado>
+    </resultados>
+</manifesto>
