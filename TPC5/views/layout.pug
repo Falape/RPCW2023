@@ -1,0 +1,73 @@
+doctype html
+html
+  head
+    title= title
+    link(rel="icon" href="/images/favicon.png")
+    link(rel='stylesheet', href='/stylesheets/mini-dark.css')
+
+    script(src="/javascripts/popUpForm.js")
+      
+  nav 
+    .container
+        h2 Registo de Tarefas
+
+    form.container(action="/createNote" method="POST")
+        .row
+            label
+              b Ator
+            input.col-sm-12(type="text" placeholder="Nome" name="Nome")
+
+            label
+              b Descrição
+            input.col-sm-12(type="text" placeholder="Tarefa" name="Descricao")
+
+            label
+              b Tipo de Tarefa
+            input.col-sm-12(type="text" placeholder="Tipo" name="Tipo")
+
+            .col-sm
+                label
+                  b Data de início
+                input(type="date" name="Inicio")
+
+                label
+                  b Data de fim
+                input(type="date" name="Fim")
+
+
+            input.tertiary(type="submit" value="Registar")
+            input.secondary(type="reset" value="Limpar valores")
+  body
+    block content
+
+
+
+  .form-popup(id="myForm")
+    form.container(action="/editNote" method="POST")
+        .row
+            input.col-sm-12.Id(style="display:none;" type="text" name="id")
+
+            label
+              b Ator
+            input.col-sm-12.Nome(type="text" placeholder="Nome" name="Nome")
+
+            label
+              b Descrição
+            input.col-sm-12.Descricao(type="text" placeholder="Tarefa" name="Descricao")
+
+            label
+              b Tipo de Tarefa
+            input.col-sm-12.Tipo(type="text" placeholder="Tipo" name="Tipo")
+
+            .col-sm
+                label
+                  b Data de início
+                input(type="date" class="Inicio" name="Inicio")
+
+                label
+                  b Data de fim
+                input(type="date" class="Fim" name="Fim")
+
+            button.tertiary(type="submit") Atualizar
+            button.secondary(type="button" onclick="closeForm()") Close
+  

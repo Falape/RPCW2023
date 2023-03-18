@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifesto>
+    <meta>
+        <título>TPC5</título>
+        <data>2023-03-18</data>
+        <autor>
+            <nome>Filipe Emanuel Santos Fernandes</nome>
+            <id>a83996</id>
+            <gitlink>https://github.com/Falape/RPCW2023</gitlink>
+        </autor>
+        <uc>Representação e Processamento de Conhecimento na Web</uc>
+    </meta>
+    <resumo>
+        <p>Este TPC consistia replicar o TPC4 mas utilizando a framework <it>expressjs</it>.</p>
+        <p>Foi então criado um servidor express para gerir tarefas, isto é consultar, editar, concluir e eliminar tarefas.</p>
+        <p>Seguindo uma estrutura Single Page Application</p>
+        <p>Como base de dados para conservação dos dados está a ser utilizado o <it>json-server</it> e os pedidos a este são feitos utilizando o <it>axios</it>.</p>
+        <p>Todos estes objetivos foram conseguidos.</p>
+        <p>Para a opção de editar tarefas é utilizado um formúlário pop-up.</p>
+        <p>Para correr o servidor é preciso ter o json-server a correr, <it>notes.json</it>na porta 3000.</p>
+        <p>Para correr o servidor basta correr 'npm install' para que sejam instaladas as dependências e depois utilizar 'npm start'.</p>
+    </resumo>
+    <resultados>
+        <resultado path="notes.json">Ficheiro json que terá a função de data de base;</resultado>
+        <resultado path="/views/">Pasta onde se encontração os ficheiros PUG para a geração da página HTML;</resultado>
+        <resultado path="/public/images/favicon.png">Favicon;</resultado>
+        <resultado path="/public/javascripts/popUpForm.js">Ficheiro JS que contei as funções para o formulário pop-up utilizado para editar os dados the uma tarefa;</resultado>
+        <resultado path="/controller/note.js">Controlador para os acessos à base de dados;</resultado>
+        <resultado path="/public/stylesheets/mini-dark.css">Ficheiro CSS.</resultado>
+    </resultados>
+</manifesto>

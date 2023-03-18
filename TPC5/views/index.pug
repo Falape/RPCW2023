@@ -1,0 +1,58 @@
+extends layout
+
+block content
+    .container.col-sm-offset-5
+        h1 Tarefas
+
+    .container.row
+        .container.col-sm
+            table.hoverable
+                caption To Do
+                thead
+                    tr
+                        th Nome
+                        th Descrição
+                        th tipo
+                        th Inicio
+                        th Fim
+                        th Opções
+
+                tbody             
+                    each todo in todos
+                      tr(id=todo.id)
+                        td(class="Nome")= todo.Nome
+                        td(class="Descricao")= todo.Descricao
+                        td(class="Tipo")= todo.Tipo
+                        td(class="Inicio")= todo.Inicio
+                        td(class="Fim")= todo.Fim
+                        td
+                          .button-group.margin-left
+                            button.primary(onclick="openForm(this)") Editar
+                            button.tertiary
+                                a(href="/done/" + todo.id) Done
+
+        .container.col-sm
+            table.hoverable
+                caption Done
+                thead
+                    tr
+                        th Nome
+                        th Descrição
+                        th tipo
+                        th Inicio
+                        th Fim
+                        th Opções
+                tbody            
+                    each done in dones
+                      tr(id=done.id)
+                        td= done.Nome
+                        td= done.Descricao
+                        td= done.Tipo
+                        td= done.Inicio
+                        td= done.Fim
+                        td
+                          .button-group.margin-left
+                            button.primary
+                                a(href="/undone/" + done.id) Undone                         
+                            button.tertiary
+                                a(href="/delete/" + done.id) Delete
