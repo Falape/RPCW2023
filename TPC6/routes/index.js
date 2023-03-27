@@ -5,12 +5,14 @@ var Person = require('../controllers/person')
 /* GET home page. */
 router.get('/', function(req, res, next) {
   var data = new Date().toISOString().substring(0, 16)
+  console.log("Chega aqui!")
   Person.list()
-    .then(alunos => {
-      res.render('index', { slist: alunos, d: data });
+    .then(pessoas => {
+      console.log(pessoas)
+      res.render('index', { slist: pessoas, d: data });
     })
     .catch(erro => {
-      res.render('error', {error: erro, message: "Erro na obtenção da lista de alunos"})
+      res.render('error', {error: erro, message: "Erro na obtenção da lista de pessoas"})
     })
 });
 

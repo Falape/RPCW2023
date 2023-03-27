@@ -2,8 +2,9 @@ var Person = require('../models/person')
 
 // Person list
 module.exports.list = () => {
-    return  Person.find()
+    return  Person.find({id: "p1"},{id:1})
     .then(docs => {
+        console.log(docs)
         return docs
     })
     .catch(error => {

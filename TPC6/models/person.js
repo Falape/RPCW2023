@@ -1,16 +1,16 @@
 var mongoose = require('mongoose');
 
-var moradaSchema = new mongoose.Schema({
+var MoradaSchema = new mongoose.Schema({
     cidade : String,
     distrito : String
 });
 
-var partidoSchema = new mongoose.Schema({
+var PartidoSchema = new mongoose.Schema({
     party_abbr : String,
     party_name : String,
 });
 
-var atributosSchema = new mongoose.Schema({
+var AtributosSchema = new mongoose.Schema({
     fumador : Boolean,
     gosta_cinema : Boolean,
     gosta_viajar : Boolean,
@@ -24,26 +24,27 @@ var atributosSchema = new mongoose.Schema({
 });
 
 
-var personSchema = new mongoose.Schema({
+var PersonSchema = new mongoose.Schema({
     id: String,
     nome: String,
-    idade : String,
-    morada : moradaSchema,
-    BI: String,
-    descrição: String,
-    profissão: String,
-    partido_politico: partidoSchema,
-    religião: String,
+    idade : Number,
+    sexo: String,
+    morada : MoradaSchema,
+    descricao: String,
+    cc: String,
+    profissao: String,
+    partido_politico: PartidoSchema,
+    religiao: String,
     desportos: [String],
     animais: [String],
     figura_publica_pt : [String],
     marca_carro: String,
     destinos_favoritos : [String],
-    atributos : atributosSchema
+    atributos : AtributosSchema
 });
 
 //var studentModel = mongoose.model('student', studentSchema);
 
 //module.exports = studentModel;
 
-module.exports = mongoose.model('person', personSchema);
+module.exports = mongoose.model('person', PersonSchema);

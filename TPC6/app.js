@@ -3,6 +3,19 @@ var express = require('express');
 var path = require('path');
 var logger = require('morgan');
 
+//import the moongose module
+var mongoose = require('mongoose');
+//set up default mongoose connection
+var mongoDB = 'mongodb://127.0.0.1/RPCW2023';
+mongoose.connect(mongoDB, {useNewUrlParser: true, useUnifiedTopology: true});
+//get default connection
+var db = mongoose.connection;
+//bind connection to error event (to get notification of connection errors)
+db.on('error', console.error.bind(console, 'MongoDB connection error...'));
+db.once('open', function() {
+    console.log("Conexão ao MongoDB realizada com sucesso...");
+});
+
 var indexRouter = require('./routes/index');
 
 var app = express();
